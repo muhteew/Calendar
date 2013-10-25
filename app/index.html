@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="assets/css/app.min.css">
+
+</head>
+<body>
+
+    <div class="backgroundImage"></div>
+
+    <div id="pageContainer">
+
+        <div id="searchResults" class="popup searchResults invisible">
+            <div class="searchResults_itemListContainer">
+                <div class="searchResults_itemList">
+                    <div class="searchResults__item">
+                        <div class="searchResults__itemSelectArea searchResults__itemSelectArea_selected">
+                            <div class="searchResults__itemHeader"></div>
+                            <time class="searchResults__itemText"></time>
+                            <div class="searchResults__gradient"></div>
+                        </div>
+                        <div class="searchResults__itemBorder"></div>
+                    </div>
+                    <div class="searchResults__item searchResultsTemplate">
+                        <div class="searchResults__itemSelectArea">
+                            <div class="searchResults__itemHeader"></div>
+                            <time class="searchResults__itemText"></time>
+                            <div class="searchResults__gradient"></div>
+                        </div>
+                        <div class="searchResults__itemBorder"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="searchResults__scroll invisible"></div>
+            <div class="popupArrow popupArrow_bottom"></div>
+        </div>
+
+        <div id="basicForm" class="popup invisible">
+            <input name="eventString" type="text" placeholder="5 марта, 14:00, День Рождения"/>
+            <input type="button" class="popup__button button_submit" value="Создать" />
+            <div class="popup__close"></div>
+            <div class="popupArrow popupArrow_bottom"></div>
+        </div>
+
+        <ul class="horisontalBlockList buttonList">
+            <li id="addEventBasic" class="customButton button01">Добавить</li>
+            <li id="updateMonthTable" class="customButton button01">Обновить</li>
+        </ul>
+
+        <div class="search">
+            <input type="search" class="search__input" placeholder="Событие, дата или участник" />
+            <div class="input__clear invisible"></div>
+        </div>
+
+        <div id="monthSelector" class="monthSelector">
+            <div class="customButton button02 monthSelector__buttonLeft" data-type="left"></div>
+            <div class="monthSelector__month"></div>
+            <div class="customButton button02 monthSelector__buttonRight" data-type="right"></div>
+            <div class="customButton button02 monthSelector__buttonToday" data-type="today">Сегодня</div>
+        </div>
+
+        <!-------monthTable------>
+        <div id="monthTable" class="monthTable monthTableTemplate hidden">
+
+            <div class="monthTable__row monthTableTemplate">
+                <div class="monthTable__cell monthTableTemplate">
+                    <time class="monthTable__day"></time>
+                </div>
+
+                <div class="monthTable__cell monthTable__cell_filled monthTableTemplate">
+                    <time class="monthTable__day"></time>
+                    <section class="monthTable__event">
+                        <h1></h1>
+                        <span></span>
+                    </section>
+                </div>
+            </div>
+
+        </div>
+        <!---------------------->
+    </div>
+
+    <div id="detailForm" class="popup detailForm invisible">
+        <div class="popup__header hidden"></div>
+        <input name="eventName" type="text" placeholder="Событие">
+        <time class="popup__info detailForm__date" datetime="2013-03-06"></time>
+        <input name="eventDate" type="text" placeholder="День, месяц, год">
+        <div class="popup__info detailForm__attendanceList hidden"></div>
+        <input name="eventAttendanceList" type="text" placeholder="Имена участников" style="margin-bottom: 35px;">
+        <textarea name="eventDescription" placeholder="Описание" style="margin-top: 0px; height: 117px; margin-bottom: 10px;"></textarea>
+        <input class="popup__button button_submit" type="button" value="Готово" />
+        <input class="popup__button button_cancel" type="button" value="Удалить" />
+        <div class="popup__close"></div>
+        <div class="popupArrow"></div>
+    </div>
+
+
+    <script src="assets/js/app.min.js"></script>
+
+
+    <!-------pixLayout------
+    <script src="pixLayout/pixlayout.js"></script>
+    <script>
+        $(function () {
+            $.pixlayout({
+                clip: true,
+                src: "pixLayout/Calendar-HW-07.png",
+                show: true,
+                center: false,
+                top: 0,
+                left: 140,
+                pervious: false,
+                zindex: 100,
+                opacity: 1
+            });
+        });
+    </script>
+    <!---------------------->
+
+</body>
+</html>

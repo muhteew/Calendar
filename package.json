@@ -1,0 +1,13 @@
+{
+  "name": "HHTestTask",
+  "description": "test task for devschool",
+  "author": "muhteew",
+  "devDependencies": {
+    "grunt": "0.x.x",
+    "grunt-contrib-cssmin": "x",
+    "grunt-contrib-uglify": "x",
+    "grunt-contrib-watch": "x",
+    "grunt-contrib-concat": "~0.3.0"
+  },
+  "engine": "node >= 0.10"
+}

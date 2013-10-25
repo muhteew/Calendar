@@ -1,0 +1,385 @@
+ul.horisontalBlockList {
+    display: table;
+    list-style: none;
+    padding: 0;
+    font-size: 0;
+}
+
+    ul.horisontalBlockList li {
+        display: inline-block;
+    }
+
+/*===========Таблица==========*/
+
+.monthTable {
+    width: 900px;
+    font-size: 11px;
+    color: #666;
+}
+
+.monthTable__row {
+    float: left;
+}
+
+.monthTable__cell {
+    position: relative;
+    float: left;
+    width: 129px;
+    height: 119px;
+    border: 1px solid #ebebeb;
+    background: #fff;
+    padding: 7px 9px 9px;
+    margin: -1px 0 0 -1px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.monthTable__day {
+    color: #999;
+}
+
+.monthTable h1 {
+    font-size: 11px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: 900;
+}
+
+.monthTable__event {
+    margin-top: 2px;
+    line-height: 1.5;
+}
+
+.monthTable__cell_filled {
+    background: #c2e4fe;
+}
+
+.monthTable__cell_today {
+    background: #f4f4f4;
+    border: 1px solid #e2e2e2;
+    z-index: 99;
+}
+
+.monthTable__cell_selected {
+    background: #e5f1f9;
+    border: 2px solid #8abfe9;
+    padding: 6px 8px 8px;
+    z-index: 999;
+}
+
+/*ячейка, которая не является днем месяца,
+  и содержит только название дня недели*/
+.monthTable__cell_empty {
+    cursor: auto;
+}
+
+.monthTable__cell_today .monthTable__day {
+    color: #666;
+    font-weight: 600;
+}
+
+/*===========Кнопки==========*/
+
+.button01, .button02 {
+    cursor: pointer;
+}
+
+.button01 {
+    display: inline-block;
+    border-radius: 2px;
+    background: #0271c7;
+    padding: 4px 12px;
+    -webkit-text-shadow: 0px 1px 2px #015393;
+    text-shadow: 0px 1px 2px #015393;
+    -webkit-box-shadow: rgba(0,0,0,0.4) 0px 1px 2px;
+    box-shadow: rgba(0,0,0,0.4) 0px 1px 2px;
+    font-size: 13px;
+    color: #fff;
+    text-align: center;
+}
+
+.button01_pressed {
+    background: #015da4;
+    -webkit-box-shadow: rgba(0,0,0,0.4) 0px 1px 2px inset;
+    box-shadow: rgba(0,0,0,0.4) 0px 1px 2px inset;
+    color: #c2d0e2;
+}
+
+.button02 {
+    display: inline-block;
+    border: 1px solid #d5d5d5;
+    border-radius: 4px;
+    background: #fff;
+    padding: 0px 7px;
+    font-size: 11px;
+    -webkit-box-shadow: rgba(0,0,0,0.2) 0px 0px 4px inset;
+    box-shadow: rgba(0,0,0,0.2) 0px 0px 4px inset;
+    color: rgba(0,0,0,);
+    text-align: center;
+}
+
+.button02_pressed {
+    border-color: #bfbfbf;
+}
+
+/*===========Поиск==========*/
+
+.search {
+    background: url(../img/searchIcon.gif) no-repeat;
+    background-position: left center;
+    cursor: pointer;
+}
+
+.search__input {
+    width: 183px;
+    margin-left: 21px;
+}
+
+.searchResults,
+.searchResults_itemList {
+    height: 384px;
+}
+
+.searchResults_itemListContainer {
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.searchResults_itemList {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-left: 0px;
+    margin-right: -16px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.searchResults__item {
+    width: 188px;
+    margin-bottom: 4px;
+}
+
+.searchResults__itemHeader {
+    font-weight: 900;
+    height: 1.35em;
+    width: 309px;
+    font-size: 12px;
+    margin-bottom: -2px;
+    overflow: hidden;
+}
+
+.searchResults__itemBorder {
+    height: 1px;
+    background: #EBEBEB;
+}
+
+.searchResults__itemText {
+    font-size: 11px;
+    color: #666;
+}
+
+.popup.searchResults {
+    padding: 4px;
+}
+
+.searchResults__itemSelectArea {
+    position: relative;
+    padding: 4px 7px;
+    margin-bottom: 4px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.searchResults__itemSelectArea_selected {
+    background: #189FFF;
+    color: #fff;
+}
+
+    .searchResults__itemSelectArea_selected .searchResults__itemText {
+        color: #fff;
+    }
+
+    .searchResults__itemSelectArea_selected .searchResults__gradient {
+        background: url(../img/searchGradient_selected.png) repeat-y;
+        background-position: top right;
+    }
+
+.searchResults__gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    background: url(../img/searchGradient.png) repeat-y;
+    background-position: top right;
+}
+
+.searchResults__scroll {
+    position: absolute;
+    background: #7A7A7A;
+    border-radius: 50px;
+    top: 10px;
+    right: 7px;
+    width: 7px;
+    height: 24px;
+}
+
+.input__clear {
+    position: absolute;
+    top: 0px;
+    right: 7px;
+    font-family: Arial, sans-serif;
+    font-size: 19px;
+    color: #b0b0b0;
+    cursor: pointer;
+}
+
+    .input__clear:before {
+        content: "\d7";
+    }
+
+/*=========Листалка месяцев==========*/
+.monthSelector {
+}
+
+.monthSelector__month {
+    position: relative;
+    display: inline-block;
+    top: 3px;
+    width: 127px;
+    text-align: center;
+}
+
+.monthSelector__buttonToday {
+    margin-left: 5px;
+}
+
+.monthSelector__buttonLeft,
+.monthSelector__buttonRight {
+    position: relative;
+    width: 16px;
+    height: 15px;
+    top: 5px;
+    padding: 0;
+}
+
+.monthSelector__buttonLeft {
+    background: url(../img/arrowLeft.gif) no-repeat;
+    background-position: 6px 5px;
+}
+
+.monthSelector__buttonRight {
+    background: url(../img/arrowRight.gif) no-repeat;
+    background-position: 7px 5px;
+}
+
+/*===============popup================*/
+
+.popup {
+    position: absolute;
+    font-size: 13px;
+    width: 253px;
+    background: #fff;
+    padding: 25px;
+    -webkit-box-shadow: rgba(0,0,0,0.25) 0px 0px 20px;
+    box-shadow: rgba(0,0,0,0.25) 0px 0px 20px;
+    border: 1px solid #ccc;
+    z-index: 9999;
+}
+
+    .popup input[type="text"],
+    .popup textarea {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+.popup__close {
+    font-family: Arial, sans-serif;
+    position: absolute;
+    top: 1px;
+    right: 7px;
+    font-size: 15px;
+    color: #777;
+    cursor: pointer;
+}
+
+    .popup__close:before {
+        content: "\d7";
+    }
+
+input[type="button"].popup__button {
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+.popup__header {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 9px;
+    margin-top: 0;
+}
+
+.popup__subheader {
+    font-size: 11px;
+    font-weight: 900;
+    margin-bottom: 2px;
+    margin-top: 0;
+}
+
+.popup__header, .popup__info {
+    padding-left: 9px;
+}
+
+.popupArrow_bottom {
+    position: absolute;
+    top: -13px;
+    left: 20px;
+    background: url(../img/popupArrowBottom.png) no-repeat;
+    background-position: left top;
+    width: 27px;
+    height: 13px;
+}
+
+.popupArrow_right {
+    position: absolute;
+    left: -13px;
+    background: url(../img/popupArrowRight.png) no-repeat;
+    background-position: left top;
+    width: 13px;
+    height: 27px;
+}
+
+.popupArrow_left {
+    position: absolute;
+    right: -13px;
+    background: url(../img/popupArrowLeft.png) no-repeat;
+    background-position: left top;
+    width: 13px;
+    height: 27px;
+}
+
+.detailForm__date {
+    position: relative;
+    top: 4px;
+    display: block;
+    font-size: 12px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.detailForm__attendanceList {
+    position: relative;
+    top: 5px;
+    font-size: 12px;
+    min-height: 33px;
+    padding-bottom: 28px;
+}

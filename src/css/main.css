@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden; /*ВРЕМЕННО для pixLayout*/
+}
+
+input[type="text"],
+input[type="search"],
+textarea {
+    border: 1px solid #c1c1c1;
+    border-radius: 2px;
+    -webkit-box-shadow: rgba(0,0,0,0.3) 0px 1px 3px inset;
+    box-shadow: rgba(0,0,0,0.3) 0px 1px 3px inset;
+    font-size: 13px;
+    padding: 4px 7px;
+    outline: 0;
+    -webkit-appearance: none;
+}
+
+#pageContainer {
+    position: relative;
+    margin: auto;
+    width: 900px;
+}
+
+.backgroundImage {
+    position: absolute;
+    width: 100%;
+    height: 101px;
+    background: #f4f4f4;
+    -webkit-box-shadow: rgba(0,0,0,0.3) 0px 1px 5px;
+    box-shadow: rgba(0,0,0,0.3) 0px 1px 5px;
+    background-position: left bottom;
+    z-index: -999;
+}
+
+/*===========Таблица==========*/
+
+.monthTable {
+    position: absolute;
+    top: 149px;
+    left: 0;
+}
+
+/*===========Кнопки==========*/
+
+ul.buttonList {
+    position: absolute;
+    top: 56px;
+    left: 0;
+}
+
+ul.buttonList li {
+    margin-right: 9px;
+}
+
+/*===========Поиск==========*/
+
+.search {
+    position: absolute;
+    right: 0;
+    top: 56px;
+}
+
+/*=========Листалка месяцев==========*/
+
+.monthSelector {
+    position: absolute;
+    left: 0;
+    top: 112px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*================popup===============*/
+
+#basicForm {
+    top: 97px;
+    left: -1px;
+}
+
+#detailForm {
+    top: 500px;
+    left: 100px;
+}
+
+/*==============================*/
+
+#searchResults {
+    top: 97px;
+    left: 701px;
+    width: 205px;
+}
