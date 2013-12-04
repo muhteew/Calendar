@@ -1,4 +1,4 @@
-﻿HHTestTask
+﻿Calendar
 ==========
 
 Реализовано:
